@@ -301,13 +301,11 @@ figure{position: relative;margin: 0;}
 /* -----METAVERSE/VR Part -------------- */
 .meta{
     box-sizing: content-box;
-    margin-left:13%;
     margin-top: 8vh;
     position: relative;
     overflow: hidden;
-    height: 88vh;
-    width: 74%;
-    border-radius: 30px;
+    height: 100vh;
+    width: 100%;
 }
 #VR {
     transition: 0.4s ease-in-out;
@@ -352,6 +350,51 @@ figure{position: relative;margin: 0;}
        text-align: right;
        color: #1fc0ff;
     }
+  /* ----- Hi-Fi ----  */
+  .hifi{
+      border-radius: 35px;
+      position: relative;
+      height: 60vh;
+      width: 80vw;
+      margin: 20vh 10vw;
+      background: url(/assets/img/mesh.png);
+      background-size: cover;
+      background-position: 50% 50%;
+  }
+  .hfContent{
+    backdrop-filter: blur(20px);
+    border-radius: 35px;
+    position: relative;
+    height: 60vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hifi h1{
+    margin: 0;
+    font-size: 60px;
+}
+.hifi h2{
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 2vh;
+}
+.hifi p{
+    text-transform: capitalize;
+    line-height: 180%;
+    text-align: center;
+    width: 40vw;
+    font-size: 18px;
+}
+.hifi img{
+    left: 30px;
+    width: 100px;
+    position: absolute;
+    bottom: 25px;
+    fill: white;
+}
 
   /* ----GitMusic----- */
   .gitMusic{
@@ -394,7 +437,107 @@ figure{position: relative;margin: 0;}
       text-align: right;
       font-size: 14px;
   }
+  /* -------  Feature Slider  ------ */
+  #viz{width: 125px;}
+  #net{width: 200px;}
+  #eq{width: 100px;}
+  .fixer{height: 100px;}
+  .moreFeature { 
+      margin:0;
+      margin-bottom: 30vh;
+      box-sizing: border-box;
+      height: 90vh !important;
+      padding: 72px 0 
+    }
+  [type=radio] {
+    display: none;
+  }
+  
+  #featureSlider {
+    height: 65vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  #featureSlider label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1a0098;
+    margin: auto;
+    border-radius: 30px;
+    position: absolute;
+    left: 0; right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    padding: 0 30px;
+    padding-top: 50px;
+    box-sizing: border-box;
+  }
+  
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+  #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+  #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.272);
+    transform: translate3d(-30%,0,-300px);
+  }
+  
+  #s1:checked ~ #slide5, #s2:checked ~ #slide1,
+  #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+  #s5:checked ~ #slide4 {
+      
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(-55%, 20px,-100px);
+  }
+  
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2,
+  #s3:checked ~ #slide3, #s4:checked ~ #slide4,
+  #s5:checked ~ #slide5 {
+    background-color: #2301ce;
+    box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+  }
+  
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+  #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+  #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(55%, 20px,-100px);
+  }
+  
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+  #s3:checked ~ #slide5, #s4:checked ~ #slide1,
+  #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(30%,0,-200px);
+  }
 
+  
+  .moreFeatureTitle {
+    color: #00c3ff;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px !important;
+    font-size: 50px !important;
+  }
+  .card-slider {
+    background: #fff;
+    width: 440px;
+    height: 460px;
+  }  
+  .moreFeature h1{
+      font-weight: 500;
+      font-size: 27px;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+  }
+  .moreFeature p{
+      text-align: center;
+    font-size: 20px;
+    line-height: 130%;
+  }
 
   /* ---------- Footer ------------- */
   footer{
@@ -411,7 +554,7 @@ figure{position: relative;margin: 0;}
       display: flex;
       flex-direction: column;
       text-align: center;
-      animation: gradBox 10s ease-in-out infinite;
+      animation: gradBox 5s ease-in-out infinite;
   }
   @keyframes gradBox {
       0%{box-shadow: 0 0 30px 2px #3F08FC;}
