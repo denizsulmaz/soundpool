@@ -357,7 +357,7 @@ figure{position: relative;margin: 0;}
       height: 60vh;
       width: 80vw;
       margin: 20vh 10vw;
-      background: url(/assets/img/mesh.png);
+      background: url(../assets/img/mesh.png);
       background-size: cover;
       background-position: 50% 50%;
   }
