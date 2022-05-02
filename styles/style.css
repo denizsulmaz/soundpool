@@ -12,6 +12,27 @@ box-sizing: border-box;
 font-family: 'Raleway', sans-serif;
 color: aliceblue;
 }
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+    background: #5944a084; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5A44A0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5825ff; 
+  }
 .wel{
     margin-top: -25px;
     border-radius: 25px;
@@ -93,7 +114,38 @@ main .left h2{font-size: 35px;
     font-weight: 400;}
 main .right{width: 60%;}
 main .left a img{width: 150px; margin-bottom: 40px;margin-top: -80px;}
-main p{line-height: 140% ;opacity: 0.9;}
+main p{line-height: 10% ;opacity: 0.9; font-size: 18px;}
+main a:nth-of-type(2){
+    margin: 5vh 0;
+    font-size: 18px;
+    color: white;
+    background: rgb(39, 2, 163);
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    letter-spacing:1px;
+    animation: bgTrans 6s ease-in-out infinite;
+    transition: 0.5s ease-in-out;
+
+}
+main a:nth-of-type(2):hover{
+    box-shadow: 0 0  35px 0px rgba(255, 255, 255, 0.529);
+    font-weight: 600;
+    background-color: white;
+    color: #3F08FC;
+    animation: none;
+}
+@keyframes bgTrans {
+    0%{
+        background: #4107fd;
+        /* background: linear-gradient(90deg, rgba(65,7,253,1) 0%, rgba(4,164,207,1) 100%); */
+    }
+    50%{
+        /* background: linear-gradient(270deg, rgba(65,7,253,1) 0%, rgba(4,164,207,1) 100%); */
+        background: #04a4cf;
+    }
+    100%{background: #4107fd;}
+}
 .logoText{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -154,7 +206,7 @@ main .right img{
 }
 .slider-ctr {
     width: 80vw;
-    height: 80vh;
+    height: 70vh;
     position: absolute;
     left: 9vw;
     top: 10%;
@@ -229,8 +281,8 @@ main .right img{
 }
 .slide figcaption {
     position: absolute;
-    top: 30px;
-    left:40px;
+    top: 60px;
+    left:60px;
 }
 .slide .title {
     font-size: 40px; 
@@ -246,7 +298,7 @@ main .right img{
 }
 .slide .author {
     width: 35vw;
-    padding-right: 0.5vw;
+    padding-right: 5vw;
     font-size: 18px;
     color: white;
     opacity: 0.9;
@@ -266,11 +318,20 @@ main .right img{
 }
 .capImage{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    height: 35vh;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 30px;
 }
 .capImage img{
-    width: 70%;
+    width: 100%;
+}
+.capImage video{
+    filter: invert(100%);
+    width: 100%;
+    margin-left: -10vw;
 }
 figure{position: relative;margin: 0;}
 .figfooter{
@@ -280,7 +341,7 @@ figure{position: relative;margin: 0;}
     padding-top: 50px;
     left: -10px;
     position: absolute;
-    bottom: 500px;
+    top: 56vh;
     height: 2vh;
     display: flex;
     align-items: center;
@@ -296,29 +357,34 @@ figure{position: relative;margin: 0;}
     font-size: 30px;
     left: calc(50% - 250px);
 }
-.partner img{width: 130px;}
+.partner img{width: 130px; filter: blur(5px);}
 
 /* -----METAVERSE/VR Part -------------- */
 .meta{
-    box-sizing: content-box;
+    box-sizing: border-box;
+    margin-left: 3%;
     margin-top: 8vh;
     position: relative;
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
+    overflow: hidden !important;
+    height: 94vh;
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
 #VR {
     transition: 0.4s ease-in-out;
     opacity: 0.6;
     z-index: 0;
     position: absolute;
-    min-width:110%; 
+    width:100%; 
 }
 #VR:hover{opacity: 1;}
 
   .vrContent{width: 100vw;}
   .vrContent h1{
-    -webkit-text-stroke: 2px #8F6CFF;
+    -webkit-text-stroke: 2px #ffffff;
       position: absolute;
       top: 30px;
       left: -5px;
@@ -330,7 +396,7 @@ figure{position: relative;margin: 0;}
       text-transform: capitalize;
       font-weight: 800;
       line-height: 110%;
-      background-color: rgba(0, 0, 0, 0.8);
+      /* background-color: rgba(0, 0, 0, 0.8); */
       padding: 15px 20px;
       border-radius: 20px;
       letter-spacing: 3px;
@@ -357,7 +423,7 @@ figure{position: relative;margin: 0;}
       height: 60vh;
       width: 80vw;
       margin: 20vh 10vw;
-      background: url(../assets/img/mesh.png);
+      background: url(/assets/img/mesh.png);
       background-size: cover;
       background-position: 50% 50%;
   }
@@ -389,6 +455,7 @@ figure{position: relative;margin: 0;}
     font-size: 18px;
 }
 .hifi img{
+    filter: blur(4px);
     left: 30px;
     width: 100px;
     position: absolute;
@@ -538,7 +605,11 @@ figure{position: relative;margin: 0;}
     font-size: 20px;
     line-height: 130%;
   }
-
+  /* Road Map Timeline */
+  .timeline{
+    height: 130vh;
+  }
+  .timeline img{width: 100%;}
   /* ---------- Footer ------------- */
   footer{
     border-top-right-radius: 35px;
@@ -547,6 +618,7 @@ figure{position: relative;margin: 0;}
       width: 90%;
       margin: 0 5%;
       margin-left: 3.5%;
+      margin-top: 15vh;
       height: 50vh;
       box-shadow: 0 0 30px 5px #3F08FC;
       transition: box-shadow 0.1s ease-in-out;
@@ -579,6 +651,12 @@ figure{position: relative;margin: 0;}
      justify-content: space-between;
      margin-left: 1vw;
  }
+ .social a{
+     transition: 0.3s ease-in-out;
+    font-size: 20px;
+    padding-right: 10px;
+ }
+ .social a:hover{color: #7d55ff; font-size: 22px;}
  footer .left{
     display: flex;
     flex-direction: column;
