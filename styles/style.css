@@ -750,5 +750,5 @@ footer .row img{
     footer .row{flex-direction: column;}footer .left{align-items: center; text-align: center;margin-bottom: 7vh;}
     footer .row img {width: 60px;}
     .blob{height: 39vh;width: 70vw;overflow: hidden;pointer-events: none;}
-    .blob iframe{width: 10vw;height: 48vh;}
+    .blob iframe{width: 180vw;height: 48vh;}
 }
