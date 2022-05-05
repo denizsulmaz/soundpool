@@ -423,7 +423,7 @@ figure{position: relative;margin: 0;}
       height: 60vh;
       width: 80vw;
       margin: 20vh 10vw;
-      background: url(../assets/img/mesh.png);
+      background: url(/assets/img/mesh.png);
       background-size: cover;
       background-position: 50% 50%;
   }
@@ -610,6 +610,21 @@ figure{position: relative;margin: 0;}
     height: 130vh;
   }
   .timeline img{width: 100%;}
+/* BLOB */
+.blob{
+    /* pointer-events: none; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43vh;
+    width: 70vw;
+    overflow: hidden;
+}
+.blob iframe{
+    width: 100vw;
+    height: 50vh;
+}
   /* ---------- Footer ------------- */
   footer{
     border-top-right-radius: 35px;
@@ -619,7 +634,7 @@ figure{position: relative;margin: 0;}
       margin: 0 5%;
       margin-left: 3.5%;
       margin-top: 15vh;
-      height: 50vh;
+      height: 35vh;
       box-shadow: 0 0 30px 5px #3F08FC;
       transition: box-shadow 0.1s ease-in-out;
       padding: 25px;
@@ -632,7 +647,7 @@ figure{position: relative;margin: 0;}
       0%{box-shadow: 0 0 30px 2px #3F08FC;}
       50%{      box-shadow: 0 0 30px 2px #1fc0ff;}  
   }
-  
+
   footer a{
       text-decoration: none;
       color: unset;
@@ -734,5 +749,6 @@ footer .row img{
     footer{width: 88%;margin: 0;margin-top: 15vh;height: 75vh;}.ftstamp{width: 70vw;}
     footer .row{flex-direction: column;}footer .left{align-items: center; text-align: center;margin-bottom: 7vh;}
     footer .row img {width: 60px;}
+    .blob{height: 39vh;width: 70vw;overflow: hidden;pointer-events: none;}
+    .blob iframe{width: 10vw;height: 48vh;}
 }
-  
