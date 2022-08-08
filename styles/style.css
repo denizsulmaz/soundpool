@@ -13,20 +13,20 @@ font-family: 'Raleway', sans-serif;
 color: aliceblue;
 }
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px rgb(0, 0, 0); 
-    background: #5944a084; 
-    border-radius: 10px;
+    background: #5944a06e; 
+    border-radius: 5px;
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #5A44A0; 
-    border-radius: 10px;
+    border-radius: 5px;
   }
   
   /* Handle on hover */
@@ -504,6 +504,62 @@ figure{position: relative;margin: 0;}
       text-align: right;
       font-size: 14px;
   }
+  /* -----Fan Powered Royalties---- */
+  .fanPowered h2{
+    margin-top: 15vh;
+    letter-spacing: 0.3px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #14C2FA;
+    text-align: center;
+  }
+  .fanPowered h3{
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 3px;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+  }
+  .fanPowered img{
+    width: 50%;
+    margin: 10vh auto;
+    margin-bottom: 10vh;
+    display: block;
+  }
+  /* ------Fair Play------ */
+  .fairPlay{
+    height: 30vh;
+    margin: 0 0 20vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .fairPlay img{
+    position: absolute;
+    width: 400px;
+  }
+  .fp{
+    animation: fair 4s ease-in-out infinite;
+  }
+  .eyw{
+    animation: eyw 4s ease-in-out infinite;
+  }
+  @keyframes eyw {
+    0%{opacity: 0;}
+    30%{opacity: 0;}
+    50%{opacity: 1;}
+    90%{opacity: 0;}
+    100%{opacity: 0;}
+  }
+  @keyframes fair {
+    0%{opacity: 1;}
+    40%{opacity: 1;}
+    50%{opacity: 0;}
+    80%{opacity: 0;}
+    100%{opacity: 1;}
+  }
   /* -------  Feature Slider  ------ */
   #viz{width: 125px;}
   #net{width: 200px;}
@@ -744,11 +800,12 @@ footer .row img{
     .gitMusic{margin: 20vh 0;} .gitMusic h5 {width: 90vw;font-size: 14px;}
     .row svg{display: none;}.row a svg{display: inline-block;}
     .moreFeature{display: none;}
-    .timeline {height: 50vh;display: flex;justify-content: center;align-items: center;margin-bottom: 30vh;}
-    .timeline img{width: 185%;}
+    .timeline {height: 30vh;display: flex;justify-content: center;align-items: center;margin-bottom: 20vh;width: 100vw;}
+    .timeline img{width: 100vw;}
     footer{width: 88%;margin: 0;margin-top: 15vh;height: 75vh;}.ftstamp{width: 70vw;}
     footer .row{flex-direction: column;}footer .left{align-items: center; text-align: center;margin-bottom: 7vh;}
     footer .row img {width: 60px;}
-    .blob{height: 39vh;width: 70vw;overflow: hidden;pointer-events: none;}
-    .blob iframe{width: 180vw;height: 48vh;}
+    .blob{display: none;}
+    .fairPlay{display: none;}
+    .fanPowered{display: none;}
 }
