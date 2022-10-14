@@ -174,7 +174,7 @@ main p{line-height: 10% ;opacity: 0.9; font-size: 18px;}
 }
 main .right img{
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     right: 20px;
     width: 800px;
 }
@@ -239,7 +239,7 @@ main .right img{
 }
 .slider-control {
     position: absolute;
-    right: 30px;
+    right: calc(50% - 90px);
     bottom: 30px;
     width: 180px;
     overflow: hidden;
@@ -363,15 +363,7 @@ figure{position: relative;margin: 0;}
     align-items: center;
     width: 80vw;
 }
-.figFooterHeader{
-    color: #089BD4;
-    font-weight: 500;
-    position: absolute;
-    width: 500px;
-    font-size: 30px;
-    left: calc(50% - 250px);
-}
-.partner img{width: 130px; filter: blur(5px);}
+.partner img{width: 130px}
 
 /* -----METAVERSE/VR Part -------------- */
 .meta{
@@ -442,7 +434,6 @@ figure{position: relative;margin: 0;}
       background-position: 50% 50%;
   }
   .hfContent{
-    backdrop-filter: blur(20px);
     border-radius: 35px;
     position: relative;
     height: 60vh;
@@ -469,7 +460,6 @@ figure{position: relative;margin: 0;}
     font-size: 18px;
 }
 .hifi img{
-    filter: blur(4px);
     left: 30px;
     width: 100px;
     position: absolute;
@@ -675,11 +665,128 @@ figure{position: relative;margin: 0;}
     font-size: 20px;
     line-height: 130%;
   }
-  /* Road Map Timeline */
-  .timeline{
-    height: 130vh;
-  }
-  .timeline img{width: 100%;}
+/* FAQ */
+.heading-primary {
+    margin-top: 10vh;
+    font-size:2em;
+    text-align:center;
+}   
+dd {
+    display: block;
+    margin-inline-start: 0px !important;
+}
+.accordion dd, .accordion__panel {
+    background-color: #16084e;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+.accordion p {
+    padding: 1em 1em 1em 2em;
+}
+.accordion a {
+    font-weight: 700;
+    color: white !important;
+}
+.accordion {
+    position: relative;
+    background-color: #16084e;
+    border-radius: 20px;
+
+}
+.faqContainer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2em 0 2em 0;
+}
+.accordionTitle, .accordion__Heading {
+    background-color: #3E0EFA;
+    text-align: center;
+    font-weight: 700;
+    padding: 2em;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+    border-bottom: 1px solid #3E0EFA;
+}
+.accFirst{
+    border-radius: 20px 20px 0px 0px !important;
+}
+.accLast{
+    border-radius: 0px 0px 20px 20px !important;
+}
+.accordionTitle:before, .accordion__Heading:before {
+    content: "+";
+    font-size: 1.5em;
+    line-height: 0.5em;
+    float: left;
+    transition: transform 0.3s ease-in-out;
+}
+.accordionTitle:hover, .accordion__Heading:hover {
+    background-color: #3E0EFA;
+}
+.accordionTitleActive, .accordionTitle.is-expanded {
+    background-color: #3E0EFA;
+}
+.accordionTitleActive:before, .accordionTitle.is-expanded:before {
+    transform: rotate(-225deg);
+}
+.accordionItem {
+    height: auto;
+    overflow: hidden;
+    max-height: 60em;
+    transition: max-height 1s;
+}
+@media screen and (min-width: 48em) {
+    .accordionItem {
+        max-height: 15em;
+        transition: max-height 0.5s;
+   }
+}
+.accordionItem.is-collapsed {
+    max-height: 0;
+}
+.no-js .accordionItem.is-collapsed {
+    max-height: auto;
+}
+.animateIn {
+    animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.animateOut {
+    animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) rotateX(-60deg);
+        transform-origin: 50% 0;
+   }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+   }
+}
+@keyframes accordionOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+   }
+    100% {
+        opacity: 0;
+        transform: scale(0.9) rotateX(-60deg);
+   }
+}
+/* Partners */
+.partners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 20vh;
+}
+.partners img{
+    width: 40vw;
+}
 /* BLOB */
 .blob{
     /* pointer-events: none; */
@@ -694,6 +801,44 @@ figure{position: relative;margin: 0;}
 .blob iframe{
     width: 100vw;
     height: 50vh;
+}
+/* -- */
+.lastCta{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.memberCta{
+    font-size: 20px;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    background-color: #351aba00;
+    border: 2.5px solid #18CAFF;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #18CAFF;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.memberCta:hover{
+    letter-spacing: 1px;
+    background-color: #341ABA;
+    border: 3px solid #341ABA;
+    color: white;
+}
+.waitlistCta{
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+}
+.waitlistCta:hover{
+    opacity: 1;
+    font-weight: 500;
 }
   /* ---------- Footer ------------- */
   footer{
@@ -795,8 +940,8 @@ footer .row img{
     width: 30vw;
 }
 @media only screen and (max-width:800px){
-    main{height: 120vh;flex-direction: column;}
-    main .left{width: 100%;align-items: center;padding: 2%;}
+    main{height: 105vh;flex-direction: column;}
+    main .left{width: 100%;align-items: center;padding:0;padding-top: 6vh;}
     main .right{width: 100%;}
     main .right img{width: 420px;right: unset;left: -20px;}
     main .left a img {margin-top: 10px;margin-bottom: 10px;width: 120px;}
@@ -816,11 +961,13 @@ footer .row img{
     .moreFeature{display: none;}
     .timeline {height: 30vh;display: flex;justify-content: center;align-items: center;margin-bottom: 20vh;width: 100vw;}
     .timeline img{width: 100vw;}
-    footer{width: 88%;margin: 0;margin-top: 15vh;height: 75vh;}.ftstamp{width: 70vw;}
+    footer{width: 88%;margin: 0;margin-top: 15vh;height: 60vh;}.ftstamp{width: 70vw;}
     footer .row{flex-direction: column;}footer .left{align-items: center; text-align: center;margin-bottom: 7vh;}
     footer .row img {width: 60px;}
     .blob{display: none;}
     .fairPlay{display: none;}
     .fanPowered{display: none;}
     .popup{display: none;}
+    .partners img{width: 98vw}
+    .faqContainer {padding: 0 0;}
 }
