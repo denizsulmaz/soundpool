@@ -954,12 +954,13 @@ footer .row img{
 /* about page */
 
 .team-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 80px;
     text-align: center;
     color: black;
     font-weight: 900;
-    -webkit-text-stroke: 2.5px #6909CA;
+    -webkit-text-stroke: 2.5px #7d55ff;
+    text-transform: uppercase;
 }
 
 .team-rhombus{
@@ -1053,21 +1054,38 @@ footer .row img{
 
 .nav {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .headerLogo {
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav .logo {
+    text-decoration: none;
+    margin-left: 5%;
 }
 
 .nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     list-style-type: none;
+}
+
+
+.nav ul li{
+    padding: 10px;
+    width: 20vh;
+    border-bottom: 1px solid black;
+    margin-right: 3px;
+    text-align: center;
 }
 
 .nav ul li a{
     color: #fff;
     text-decoration: none;
-}
-
-.nav ul li{
-    padding: 10px;
 }
 
 .nav ul li a:hover{
