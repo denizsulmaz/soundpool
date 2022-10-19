@@ -953,6 +953,37 @@ footer .row img{
 
 /* about page */
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-section {
+    border-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    left: 0;
+}
+
+.about-section img {
+    width: 10%;
+}
+
+.about-section .sh-box {
+    align-self: center;
+}
+
+.about-section .sh-box p {
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
 .team-title {
     font-family: 'Raleway', sans-serif;
     font-size: 80px;
@@ -1077,7 +1108,7 @@ footer .row img{
 
 .nav ul li{
     padding: 10px;
-    width: 20vh;
+    width: 25vh;
     border-bottom: 1px solid black;
     margin-right: 3px;
     text-align: center;
