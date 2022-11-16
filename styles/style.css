@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 /* font-family: 'Raleway', sans-serif; */
 *{outline: none;}
 body{width: 100vw;}
@@ -42,8 +44,8 @@ color: aliceblue;
 }
 
 .popup{
-    z-index: 9;
-    background-color: #000000e3;
+    z-index: 100;
+    background-color: #211f1fe3;
     backdrop-filter: blur(5px);
     width: 60vw;
     height: 64.5vh;
@@ -59,8 +61,7 @@ color: aliceblue;
 .popup button{
     transition: 0.5s ease-in-out;
     display: block;
-    margin:  0 0 40px auto;
-    margin-top: -30px;
+    margin:  -50px -50px 30px auto;
     background-color: transparent;
     font-size: 40px;
     background-color: #5ed1ff;
@@ -75,6 +76,11 @@ color: aliceblue;
     background-color: white;
     color: #5ed1ff;
     border-radius: 12px;
+}
+.popup .wel {
+    position: relative;
+    overflow: hidden;
+    padding-top: 50%;
 }
 .popup p{
     font-size: 14px;
@@ -214,6 +220,7 @@ main .right img{
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 3px #089BD4;
 }
+
 /* Offers */
 .offers h2{
     text-align: center;
@@ -313,32 +320,33 @@ main .right img{
        text-align: right;
        color: #1fc0ff;
     }
-    /* ---Mid CTA-- */
-    .midCta{
-        display: flex;
-        justify-content: center;
-        margin: 10vh auto;
-    }
-    .midCta a{
-        width: 88vw;
-        font-size: 18px;
-        color: white;
-        background: rgb(39, 2, 163);
-        text-decoration: none;
-        padding: 20px 40px;
-        border-radius: 30px;
-        letter-spacing:1px;
-        animation: bgTrans 4s ease-in-out infinite;
-        transition: 0.25s ease-in-out;
-        text-align: center;
-    }
-    .midCta a:hover{
-        box-shadow: 0 0  35px 0px rgba(255, 255, 255, 0.529);
-        font-weight: 600;
-        background-color: white;
-        color: #3F08FC;
-        animation: none;
-    }
+  /* ---Mid CTA-- */
+  .midCta{
+    display: flex;
+    justify-content: center;
+    margin: 10vh auto;
+}
+.midCta a{
+    width: 88vw;
+    font-size: 18px;
+    color: white;
+    background: rgb(39, 2, 163);
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 30px;
+    letter-spacing:1px;
+    animation: bgTrans 4s ease-in-out infinite;
+    transition: 0.25s ease-in-out;
+    text-align: center;
+}
+.midCta a:hover{
+    box-shadow: 0 0  35px 0px rgba(255, 255, 255, 0.529);
+    font-weight: 600;
+    background-color: white;
+    color: #3F08FC;
+    animation: none;
+}
+
 /* Feel  */
 .feel{
     width: 100vw;
@@ -358,8 +366,8 @@ main .right img{
     background-size: cover;
     margin-bottom: 20vh;
   }
+
   /* ----- FairPlay ----  */
-  
   .fairPlay{
     height: 30vh;
     margin: 0 0 10vh 0;
@@ -392,6 +400,7 @@ main .right img{
     80%{opacity: 0;}
     100%{opacity: 1;}
   }
+
   /* -------  Feature Slider  ------ */
   #viz{width: 125px;}
   #net{width: 200px;}
@@ -493,7 +502,6 @@ main .right img{
     font-size: 20px;
     line-height: 130%;
   }
-/* FAQ */
 /* FAQ */
 .heading-primary {
     margin-top: 0vh;
@@ -774,6 +782,185 @@ footer .row img{
 .trusted .row a img{
     height: 8vh;
 }
+
+/* about page */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-section {
+    border-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    left: 0;
+}
+
+.about-section img {
+    width: 10%;
+}
+
+.about-section .sh-box {
+    align-self: center;
+}
+
+.about-section .sh-box p {
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+.team-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    -webkit-text-stroke: 2.5px #7d55ff;
+    text-transform: uppercase;
+}
+
+.team-rhombus{
+        position: relative;
+        margin: 0 10%;
+        max-height: 1200px;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 3%;
+        justify-items: center;
+        align-items: center;
+}
+
+.member {
+    max-width: 100%;
+    grid-column: span 2;
+    z-index: 1;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all .25s;
+    cursor: pointer;
+}
+
+.member img {
+    border-radius: 50%;
+}
+
+.team-rhombus .member:nth-child(7n + 1) {
+    grid-column: 2 / span 2;
+}
+
+.team-rhombus .member:hover {
+    z-index: 2;
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}  
+
+.team-rhombus .member i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 3;
+    font-size: 34px;
+}
+
+.team-rhombus .member:hover i {
+    display: block;
+}
+.team-rhombus .member:hover img {
+    opacity: 0.5;
+}
+
+.popup-members-content {
+    position: relative;
+    overflow: hidden;
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.about-social {
+    width: 200px;
+    display: flex;
+}
+
+.about-social a {
+    background: none;
+}
+.about-social a:hover{color: #7d55ff;}
+
+.workInProgress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+
+.team-mobile-cards {
+    display: none;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .headerLogo {
+    font-size: 30px;
+    color: #fff;
+}
+
+.nav .logo {
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+}
+
+
+.nav ul li{
+    padding: 10px;
+    width: 25vh;
+    border-bottom: 1px solid black;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    color: #8F6CFF;
+}
+
+.nav ul li:hover {
+    border-bottom: 1px solid #8F6CFF;
+}
+
+/* end about page */
+
 @media only screen and (max-width:800px){
     main{height: 105vh;flex-direction: column;}
     main .left{width: 100%;align-items: center;padding:0;padding-top: 6vh;}
@@ -800,9 +987,44 @@ footer .row img{
     footer .row img {width: 60px;}
     .blob{display: none;}
     .fairPlay{display: none;}
+    .fanPowered{display: none;}
     .popup{display: none;}
     .faqContainer {padding: 0 0;}
     .trusted{width: 92vw; margin: 0vh auto 0vh auto;}
     .trusted .row a img{height: 4.3vh;}
 
+}
+
+@media only screen and (max-width:800px) {
+    .team-rhombus {
+        display: none;
+    }
+    .team-mobile-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    .team-mobile-cards h3, .team-mobile-cards h4 {
+        text-align: center;
+    }
+    .mobile-member {
+        margin-bottom: 5%;
+    }
+    .about-social a {
+        background: none;
+        font-size: 25px;
+        color: white;
+        margin: auto;
+    }
+
+    #text {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width: 1024px) {
+    .team-rhombus {
+        margin: 0;
+    }
 }
