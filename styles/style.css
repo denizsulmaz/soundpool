@@ -15,7 +15,8 @@ font-family: 'Raleway', sans-serif;
 color: aliceblue;
 }
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 4px;
+    height: 3px;
   }
   
   /* Track */
@@ -962,17 +963,17 @@ body {
 /* end about page */
 
 @media only screen and (max-width:800px){
-    main{height: 105vh;flex-direction: column;}
+    main{height: 95vh;flex-direction: column;}
     main .left{width: 100%;align-items: center;padding:0;padding-top: 6vh;}
-    main .right{width: 100%;}
-    main .right img{width: 420px;right: unset;left: -20px;}
+    main .right{width: 100%;position: relative;}
+    main .right img{width: 84vw;height: unset; right: 0;left: unset;}
     main .left a img {margin-top: 10px;margin-bottom: 10px;width: 120px;}
     .logoText{font-size: 55px;}main .left h2{font-size: 25px;}main p{font-size: 13.4px;}
-    .scrolling-text .scrolling-text-content{font-size: 35px;}
+    .scrolling-text .scrolling-text-content{font-size: 30px;}
     .purpMarq{-webkit-text-stroke: 1.5px #8F6CFF;}
     .blueMarq{-webkit-text-stroke: 1.5px #089BD4;}
     .container {height: 50px !important;}
-    .meta{height: 28vh;margin: 10vh 3%;}
+    .meta{height: 28vh;margin: 5vh 3%;}
     .vrContent h1{font-size: 20px;top: 10px;left: -10px;-webkit-text-stroke: 0.7px #ffffff;}
     .vrContent p{font-size: 16px;width: 70vw;bottom: 20px;right: 15px;}
     .hifi{width: 92vw; margin: 10vh 4vw;height: 50vh;}.hfContent{width: 92vw;height: 50vh;}
@@ -990,10 +991,28 @@ body {
     .fanPowered{display: none;}
     .popup{display: none;}
     .faqContainer {padding: 0 0;}
+    .trusted h3{text-align: center;margin-top: 5vh;}
     .trusted{width: 92vw; margin: 0vh auto 0vh auto;}
-    .trusted .row a img{height: 4.3vh;}
+    .trusted .row{flex-wrap: wrap;justify-content: center;align-items: center;}
+    .trusted .row a img{height: 6vh; margin: 0.5vh 1vw;}
+
+    /* .offers{overflow: scroll; width: 100vw;} */
+    .offer p{display: none;}
+    .offers .row{flex-wrap: wrap;width: 100vw;align-items: stretch;}
+    .offer{width: 40%;margin: 8px;padding: 8px;border-radius: 16px;height: 170px;}
+
+    .midCta {display: inline-block;justify-content: center;margin: 3vh auto;}
+    .midCta a {font-size: 18px;padding: 15px 80px;}
+    .feel {margin: 20vh auto 20vh auto;}
+    .parallax{height: 30vh;}
+    .faqContainer {margin: 0 10px;}
 
 }
+
+
+    
+
+
 
 @media only screen and (max-width:800px) {
     .team-rhombus {
